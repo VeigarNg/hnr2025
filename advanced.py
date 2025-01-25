@@ -1,11 +1,13 @@
 import numpy as np
 import streamlit as st
 import matplotlib.pyplot as plt
-import pandas as pd
 import random
 from full import State
 
-# Streamlit App
+st.set_page_config(
+        page_title = "Quantum Rubik's Cube",
+        page_icon = "Logo.png"
+    )
 st.title("Advanced Visualizer")
 
 # Sidebar for buttons

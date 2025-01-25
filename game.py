@@ -14,10 +14,11 @@ st.columns(2)
 cont_int = st.container(border=False)
 col_int = cont_int.columns(2)
 cont_pa = st.container()
-subcont_pa = cont_pa.columns(2)
-cont_act = subcont_pa[0].container(border=True)
-cont_plot = subcont_pa[1].container(border=True)
-col_cont1 = cont_act.columns(4)
+col_cont_pa = cont_pa.columns(2)
+cont_act = col_cont_pa[0].container(border=True)
+cont_plot = col_cont_pa[1].container(border=True)
+col_cont1 = cont_act.columns(2)
+col_cont2 = cont_act.columns(2)
 
 with cont_act:
     if col_cont1[0].button("Left"):
@@ -32,16 +33,16 @@ with cont_act:
     if col_cont1[1].button("Half-Right"):
         st.session_state.puzzle.half_right()
         
-    if col_cont1[2].button("Top"):
+    if col_cont2[0].button("Top"):
         st.session_state.puzzle.top()
         
-    if col_cont1[2].button("Half-Top"):
+    if col_cont2[0].button("Half-Top"):
         st.session_state.puzzle.half_top()
         
-    if col_cont1[3].button("Bottom"):
+    if col_cont2[1].button("Bottom"):
         st.session_state.puzzle.bottom()
 
-    if col_cont1[3].button("Half-Bottom"):
+    if col_cont2[1].button("Half-Bottom"):
         st.session_state.puzzle.half_bottom()
 
 scramble = col_int[0].selectbox(

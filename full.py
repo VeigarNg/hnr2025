@@ -232,6 +232,8 @@ def Menu():
                 "(Purple and Orange, respectively) represent the part of the puzzle that is imaginary. The puzzle itself is actually " +
                 "a pie chart, so the proportion represents how much of the color (or state) is mixed inside.")
         st.image("Picture 1.1.png")
+        st.text("Here's a picture of the solved state")
+        st.image("Picture 1.2.png")
         st.header("References")
         st.text("- Lordi, N., Trank-Greene, M., Kyle, A., Combes, J. (2024). Quantum permutation puzzles with indistinguishable particles. arXiv. "+
                 "https://doi.org/10.48550/arXiv.2410.22287")

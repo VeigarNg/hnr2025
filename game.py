@@ -9,7 +9,7 @@ st.set_page_config(
         page_title = "Quantum Rubik's Cube",
         page_icon = "Logo.png"
     )
-st.title("Quantum Rubik's Puzzle")
+st.title("The Puzzle")
 st.columns(2)
 cont_int = st.container(border=False)
 col_int = cont_int.columns(2)

@@ -220,6 +220,10 @@ class State:
             act()
 
 def Menu():
+    st.set_page_config(
+        page_title = "Quantum Rubik's Cube",
+        page_icon = "Logo.png"
+    )
     st.title("Welcome!")
     with st.container(border=True):
         st.header("Rules")

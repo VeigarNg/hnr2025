@@ -11,7 +11,7 @@ st.set_page_config(
     )
 st.title("The Puzzle")
 cont_pa = st.container()
-col_cont_pa = cont_pa.columns([1,3])
+col_cont_pa = cont_pa.columns([1,4])
 cont_int = col_cont_pa[0].container(border=True)
 cont_act = col_cont_pa[0].container(border=True)
 cont_plot = col_cont_pa[1].container(border=True)

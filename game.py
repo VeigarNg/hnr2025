@@ -4,6 +4,10 @@ import numpy as np
 import random as rd
 from full import State
 
+st.set_page_config(
+        page_title = "Quantum Rubik's Cube",
+        page_icon = "Logo.png"
+    )
 st.title("Quantum Rubik's Puzzle")
 st.columns(2)
 cont_int = st.container(border=False)

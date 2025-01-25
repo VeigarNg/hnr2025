@@ -15,44 +15,50 @@ col_cont_pa = cont_pa.columns([1,2])
 cont_int = col_cont_pa[0].container(border=True)
 cont_act = col_cont_pa[0].container(border=True)
 cont_plot = col_cont_pa[1].container(border=True)
-col_act = cont_act.columns(3,vertical_alignment="center")
+row1_act = cont_act.container(border=True)
+row2_act = cont_act.container(border=True)
+row3_act = cont_act.container(border=True)
+row4_act = cont_act.container(border=True)
+col1_act = row1_act.columns(3)
+col2_act = row2_act.columns(3)
+col3_act = row3_act.columns(3)
+col4_act = row4_act.columns(3)
 
-with cont_act:
-    if col_act[0].button("L"):
-        st.session_state.puzzle.left()
+if col1_act[0].button("L"):
+	st.session_state.puzzle.left()
         
-    if col_act[1].button("HL"):
-        st.session_state.puzzle.half_left()
+if col1_act[1].button("HL"):
+	st.session_state.puzzle.half_left()
 
-    if col_act[2].button("HL'"):
-        st.session_state.puzzle.half_left_inverse()
-        
-    if col_act[0].button("R"):
-        st.session_state.puzzle.right()
-        
-    if col_act[1].button("HR"):
-        st.session_state.puzzle.half_right()
+if col1_act[2].button("HL'"):
+	st.session_state.puzzle.half_left_inverse()
+	
+if col2_act[0].button("R"):
+	st.session_state.puzzle.right()
+	
+if col2_act[1].button("HR"):
+	st.session_state.puzzle.half_right()
 
-    if col_act[2].button("HR'"):
-        st.session_state.puzzle.half_right_inverse()
-        
-    if col_act[0].button("U"):
-        st.session_state.puzzle.top()
-        
-    if col_act[1].button("HU"):
-        st.session_state.puzzle.half_top()
+if col2_act[2].button("HR'"):
+	st.session_state.puzzle.half_right_inverse()
+	
+if col3_act[0].button("U"):
+	st.session_state.puzzle.top()
+	
+if col3_act[1].button("HU"):
+	st.session_state.puzzle.half_top()
 
-    if col_act[2].button("HU'"):
-        st.session_state.puzzle.half_top_inverse()
-        
-    if col_act[0].button("D"):
-        st.session_state.puzzle.bottom()
+if col3_act[2].button("HU'"):
+	st.session_state.puzzle.half_top_inverse()
+	
+if col4_act[0].button("D"):
+	st.session_state.puzzle.bottom()
 
-    if col_act[1].button("HD"):
-        st.session_state.puzzle.half_bottom()
-    
-    if col_act[2].button("HD'"):
-        st.session_state.puzzle.half_bottom_inverse()
+if col4_act[1].button("HD"):
+	st.session_state.puzzle.half_bottom()
+
+if col4_act[2].button("HD'"):
+	st.session_state.puzzle.half_bottom_inverse()
 
 scramble = cont_int.selectbox(
     "Difficulty",

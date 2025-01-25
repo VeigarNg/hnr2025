@@ -112,9 +112,9 @@ ax.plot([0,0],[-1,1],color="black")
 ax.pie(st.session_state.puzzle.plotter,colors=pie,radius=1,center=(0,0))
 plt.tight_layout()
 fig.subplots_adjust(
-    top = 1,
-    bottom = 0.55,
-    left = 0.55,
-    right = 1
+    top = 1.05,
+    bottom = 0.5,
+    left = 0.5,
+    right = 1.05
 )
 cont_plot.pyplot(fig,use_container_width=False)

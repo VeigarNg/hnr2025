@@ -15,7 +15,7 @@ col_cont_pa = cont_pa.columns([1,2])
 cont_int = col_cont_pa[0].container(border=True)
 cont_act = col_cont_pa[0].container(border=True)
 cont_plot = col_cont_pa[1].container(border=True)
-col_act = cont_act.columns(3,,vertical_alignment="center")
+col_act = cont_act.columns(3,vertical_alignment="center")
 
 with cont_act:
     if col_act[0].button("L"):

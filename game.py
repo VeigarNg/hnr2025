@@ -10,11 +10,9 @@ st.set_page_config(
         page_icon = "Logo.png"
     )
 st.title("The Puzzle")
-st.columns(2)
-cont_int = st.container(border=False)
-col_int = cont_int.columns(2)
 cont_pa = st.container()
 col_cont_pa = cont_pa.columns([1,3])
+cont_int = col_cont_pa[0].container(border=True)
 cont_act = col_cont_pa[0].container(border=True)
 cont_plot = col_cont_pa[1].container(border=True)
 col_cont1 = cont_act.columns(2)
@@ -57,7 +55,7 @@ with cont_act:
     if col_cont2[1].button("HD'"):
         st.session_state.puzzle.half_bottom_inverse()
 
-scramble = col_int[0].selectbox(
+scramble = cont_int.selectbox(
     "Difficulty",
     ("Easy", " Medium", "Hard"),
     )
@@ -72,13 +70,13 @@ def congrats():
 if 'initial' not in st.session_state:
     st.session_state.initial = True
 
-if col_int[1].button("Scramble",use_container_width=True):
+if cont_int.button("Scramble",use_container_width=True):
     st.session_state.initial = False
     st.session_state.puzzle = State(6)
     st.session_state.puzzle.update_plotter()
     st.session_state.puzzle.scramble_cube(scramble)
 
-if col_int[1].button("Intialize",use_container_width=True):
+if cont_int.button("Intialize",use_container_width=True):
     st.session_state.initial = True
     st.session_state.puzzle = State(6)
     st.session_state.puzzle.update_plotter()

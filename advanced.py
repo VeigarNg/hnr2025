@@ -89,5 +89,3 @@ for i in range(6):
 
 plt.tight_layout()
 st.pyplot(fig)
-
-st.write(f"Score: {round(np.linalg.norm(st.session_state.puzzle.prob),4)}")

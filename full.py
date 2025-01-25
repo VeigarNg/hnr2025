@@ -233,7 +233,7 @@ def Menu():
         st.text("3. Have fun solving!")
         st.header("Guides")
         st.text("In a scrambled puzzle, Yellow and Blue represent the part of the puzzle that is real, while their complementary " +
-                "(Purple and Orange, respectively) represent the part of the puzzle that is imaginary. The puzzle itself is actually " +
+                "(Dark Yellow and Dark Blue, respectively) represent the part of the puzzle that is imaginary. The puzzle itself is actually " +
                 "a pie chart, so the proportion represents how much of the color (or state) is mixed inside.")
         st.image("Picture 1.1.png")
         st.text("Here's a picture of the solved state")

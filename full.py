@@ -218,13 +218,8 @@ class State:
         for _ in range(k):
             act = random.choice(operations)
             act()
-            
+
 def Menu():
-    st.set_page_config(
-        page_title="Quantum Rubik's Puzzle",
-        page_icon="Logo.png",
-        layout="wide",
-    )
     st.title("Welcome!")
     with st.container(border=True):
         st.header("Rules")
@@ -246,7 +241,10 @@ def Menu():
 if 'puzzle' not in st.session_state:
     st.session_state.puzzle = State(6)
     st.session_state.puzzle.update_plotter()
-    
+
+st.set_page_config(
+        page_title="Quantum Rubik's Puzzle",
+        page_icon="Logo.png")
 pages = {
     "Main" : [
         st.Page(Menu)

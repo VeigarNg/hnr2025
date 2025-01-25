@@ -13,9 +13,9 @@ st.title("Quantum Rubik's Puzzle")
 st.columns(2)
 cont_int = st.container(border=False)
 col_int = cont_int.columns(2)
+cont_plot = st.container(border=True)
 cont_act = st.container(border=True)
 col_cont1 = cont_act.columns(4)
-cont_plot = st.container(border=True)
 
 with cont_act:
     if col_cont1[0].button("Left"):
@@ -57,14 +57,16 @@ def congrats():
 if 'initial' not in st.session_state:
     st.session_state.initial = True
 
-if cont_int.button("Intialize",use_container_width=True):
+if col_int[1].button("Scramble",use_container_width=True):
+    st.session_state.initial = False
+    st.session_state.puzzle = State(6)
+    st.session_state.puzzle.update_plotter()
+    st.session_state.puzzle.scramble_cube(scramble)
+
+if col_int[1].button("Intialize",use_container_width=True):
     st.session_state.initial = True
     st.session_state.puzzle = State(6)
     st.session_state.puzzle.update_plotter()
-
-if col_int[1].button("Scramble",use_container_width=True):
-    st.session_state.initial = False
-    st.session_state.puzzle.scramble_cube(scramble)
 
 if not st.session_state.initial:
     if np.array_equal(st.session_state.puzzle.plotter,solved.plotter):
@@ -97,4 +99,4 @@ ax.plot([-1,1],[0,0],color="black")
 ax.plot([0,0],[-1,1],color="black")
 ax.pie(st.session_state.puzzle.plotter,colors=pie,radius=1,center=(0,0))
 plt.tight_layout()
-st.pyplot(fig)
+cont_plot.pyplot(fig)

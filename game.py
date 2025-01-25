@@ -101,9 +101,9 @@ ax.pie(st.session_state.puzzle.plotter,colors=pie,radius=1,center=(0,0))
 plt.tight_layout()
 fig.subplots_adjust(
     top=0.5,
-    bottom=0.5,
+    bottom=0.25,
     left=0.5,
-    right=0.5,
+    right=0.25,
     hspace=0,
     wspace=0
 )

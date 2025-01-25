@@ -251,7 +251,7 @@ pages = {
         st.Page(Menu)
     ],
     "Game": [
-        st.Page("game.py",title="Quantum Rubik's Puzzle"),
+        st.Page("game.py",title="The Puzzle"),
         st.Page("advanced.py",title="Advanced Visualizer")
     ]
     }

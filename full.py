@@ -4,10 +4,6 @@ import numpy as np
 import pandas as pd
 import random
 
-st.set_page_config(
-        page_title="Quantum Rubik's Puzzle",
-        page_icon="Logo.png")
-
 class State:
     def __init__(self, number_of_state):
         self.num = number_of_state

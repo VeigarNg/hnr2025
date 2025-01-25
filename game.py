@@ -68,7 +68,7 @@ if not st.session_state.initial:
 t = np.arange(0,2*np.pi+0.1,0.1)
 x = np.cos(t)
 y = np.sin(t)
-fig, ax = plt.subplots(figsize=(2.0,2.0))
+fig, ax = plt.subplots(figsize=(2,2)))
 
 color = ["yellow","cyan","darkturquoise","gold"]
 pie = ["none"]*16
@@ -91,5 +91,4 @@ ax.plot(x,y,"black")
 ax.plot([-1,1],[0,0],color="black")
 ax.plot([0,0],[-1,1],color="black")
 ax.pie(st.session_state.puzzle.plotter,colors=pie,radius=1,center=(0,0))
-plot = st.container(border=True,height=750)
-plot.pyplot(fig)
+st.pyplot(fig)

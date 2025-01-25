@@ -103,6 +103,6 @@ fig.subplots_adjust(
     top = 0.5,
     bottom = 0.5,
     left = 0.25,
-    right = 0.25
+    right = 0.5
 )
 cont_plot.pyplot(fig,use_container_width=False)

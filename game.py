@@ -13,8 +13,10 @@ st.title("The Puzzle")
 st.columns(2)
 cont_int = st.container(border=False)
 col_int = cont_int.columns(2)
-cont_plot = st.container(border=True)
-cont_act = st.container(border=True)
+cont_pa = st.container()
+subcont_pa = cont_plot_act.columns(2)
+cont_act = subcont_pa[0].container(border=True)
+cont_plot = subcont_pa[1].container(border=True)
 col_cont1 = cont_act.columns(4)
 
 with cont_act:

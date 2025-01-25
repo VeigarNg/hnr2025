@@ -15,44 +15,43 @@ col_cont_pa = cont_pa.columns([1,2])
 cont_int = col_cont_pa[0].container(border=True)
 cont_act = col_cont_pa[0].container(border=True)
 cont_plot = col_cont_pa[1].container(border=True)
-col_cont1 = cont_act.columns(2)
-col_cont2 = cont_act.columns(2)
+col_act = cont_act.columns(3)
 
 with cont_act:
-    if col_cont1[0].button("L"):
+    if col_act[0].button("L"):
         st.session_state.puzzle.left()
         
-    if col_cont1[0].button("HL"):
+    if col_act[1].button("HL"):
         st.session_state.puzzle.half_left()
 
-    if col_cont1[0].button("HL'"):
+    if col_act[2].button("HL'"):
         st.session_state.puzzle.half_left_inverse()
         
-    if col_cont1[1].button("R"):
+    if col_act[0].button("R"):
         st.session_state.puzzle.right()
         
-    if col_cont1[1].button("HR"):
+    if col_act[1].button("HR"):
         st.session_state.puzzle.half_right()
 
-    if col_cont1[1].button("HR'"):
+    if col_act[2].button("HR'"):
         st.session_state.puzzle.half_right_inverse()
         
-    if col_cont2[0].button("U"):
+    if col_act[0].button("U"):
         st.session_state.puzzle.top()
         
-    if col_cont2[0].button("HU"):
+    if col_act[1].button("HU"):
         st.session_state.puzzle.half_top()
 
-    if col_cont2[0].button("HU'"):
+    if col_act[2].button("HU'"):
         st.session_state.puzzle.half_top_inverse()
         
-    if col_cont2[1].button("D"):
+    if col_act[0].button("D"):
         st.session_state.puzzle.bottom()
 
-    if col_cont2[1].button("HD"):
+    if col_act[1].button("HD"):
         st.session_state.puzzle.half_bottom()
     
-    if col_cont2[1].button("HD'"):
+    if col_act[2].button("HD'"):
         st.session_state.puzzle.half_bottom_inverse()
 
 scramble = cont_int.selectbox(

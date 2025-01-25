@@ -13,7 +13,7 @@ st.title("The Puzzle")
 st.columns(2)
 cont_int = st.container(border=False)
 col_int = cont_int.columns(2)
-cont_plot = st.container(border=True,height=500)
+cont_plot = st.container(border=True)
 cont_act = st.container(border=True)
 col_cont1 = cont_act.columns(4)
 

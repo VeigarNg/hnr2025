@@ -2,6 +2,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 import random as rd
+import pandas as pd
 from full import State
 
 st.set_page_config(

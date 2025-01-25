@@ -75,7 +75,7 @@ if not st.session_state.initial:
 t = np.arange(0,2*np.pi+0.1,0.1)
 x = np.cos(t)
 y = np.sin(t)
-fig, ax = plt.subplots()
+fig, ax = plt.subplots(layout="constrained")
 
 color = ["yellow","cyan","darkturquoise","gold"]
 pie = ["none"]*16

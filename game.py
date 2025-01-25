@@ -89,7 +89,7 @@ if cont_int.button("Intialize",use_container_width=True):
 if not st.session_state.initial:
     if np.array_equal(st.session_state.puzzle.plotter,solved.plotter):
         congrats()
-	st.session_state.initial = True
+		st.session_state.initial = True
 
 t = np.arange(0,2*np.pi+0.1,0.1)
 x = np.cos(t)

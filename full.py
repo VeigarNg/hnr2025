@@ -238,6 +238,10 @@ def Menu():
         st.image("Picture 1.1.png")
         st.text("Here's a picture of the solved state")
         st.image("Picture 1.2.png")
+        st.text("To see it more clearly, take a look at the demonstration video below:")
+        demo = open("Demonstration.mp4","rb")
+        demo_bytes = demo.read()
+        st.video(demo_bytes,loop=True,autoplay=True)
         st.header("References")
         st.text("- Lordi, N., Trank-Greene, M., Kyle, A., Combes, J. (2024). Quantum permutation puzzles with indistinguishable particles. arXiv. "+
                 "https://doi.org/10.48550/arXiv.2410.22287")

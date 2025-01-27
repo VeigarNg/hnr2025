@@ -238,7 +238,8 @@ def Menu():
         st.image("Picture 1.1.png")
         st.text("Here's a picture of the solved state")
         st.image("Picture 1.2.png")
-        st.text("To see it more clearly, take a look at the demonstration video below:")
+        st.text("To see it more clearly, take a look at the demonstration video below, "+
+                "which shows what happens when a Half-Left (HL) is performed on the initial state:")
         demo = open("Demonstration.mp4","rb")
         demo_bytes = demo.read()
         st.video(demo_bytes,loop=True,autoplay=True)
